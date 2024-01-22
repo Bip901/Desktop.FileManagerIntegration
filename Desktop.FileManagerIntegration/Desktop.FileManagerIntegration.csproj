@@ -19,7 +19,7 @@
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
 		<RepositoryUrl>https://github.com/Bip901/Desktop.FileManagerIntegration</RepositoryUrl>
-		<DocumentationFile>$(MSBuildProjectDirectory)/bin/$(Configuration)/net6.0/Desktop.FileManagerIntegration.xml</DocumentationFile>
+		<DocumentationFile>$(MSBuildProjectDirectory)/bin/$(Configuration)/$(TargetFramework)/Desktop.FileManagerIntegration.xml</DocumentationFile>
 	</PropertyGroup>
 
 	<ItemGroup>
