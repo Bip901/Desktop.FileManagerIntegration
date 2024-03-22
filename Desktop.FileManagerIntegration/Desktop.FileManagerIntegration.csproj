@@ -40,5 +40,9 @@
 	<ItemGroup>
 		<AdditionalFiles Include="DBusXml\org.freedesktop.FileManager1.xml" DBusGeneratorMode="Proxy" />
 	</ItemGroup>
+	
+	<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
+		<Copy SourceFiles="../README.md" DestinationFiles="README.md" UseHardlinksIfPossible="true"/>
+	</Target>
 
 </Project>
