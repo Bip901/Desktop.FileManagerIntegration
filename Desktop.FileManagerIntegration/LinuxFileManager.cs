@@ -34,7 +34,7 @@ internal static class LinuxFileManager
             checkedPath = checkedPath[..^1];
         }
         using Connection connection = GetDBusConnection();
-        OrgFreedesktopFileManager1 fileManagerProxy = new(connection, DBUS_FILEMANAGER_SERVICE_NAME, DBUS_FILEMANAGER_SERVICE_OBJECT_PATH);
+        OrgFreedesktopFileManager1Proxy fileManagerProxy = new(connection, DBUS_FILEMANAGER_SERVICE_NAME, DBUS_FILEMANAGER_SERVICE_OBJECT_PATH);
         fileManagerProxy.ShowItemsAsync(new[] { "file:///" + UrlEncoder.Default.Encode(checkedPath) }, string.Empty).Wait();
     }
 
@@ -45,7 +45,7 @@ internal static class LinuxFileManager
     internal static void ShowFolder(string path)
     {
         using Connection connection = GetDBusConnection();
-        OrgFreedesktopFileManager1 fileManagerProxy = new(connection, DBUS_FILEMANAGER_SERVICE_NAME, DBUS_FILEMANAGER_SERVICE_OBJECT_PATH);
+        OrgFreedesktopFileManager1Proxy fileManagerProxy = new(connection, DBUS_FILEMANAGER_SERVICE_NAME, DBUS_FILEMANAGER_SERVICE_OBJECT_PATH);
         fileManagerProxy.ShowFoldersAsync(new[] { "file:///" + UrlEncoder.Default.Encode(path) }, string.Empty).Wait();
     }
 }

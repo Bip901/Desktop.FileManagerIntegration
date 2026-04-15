@@ -34,7 +34,7 @@
 
 	<ItemGroup>
 		<PackageReference Include="Tmds.DBus.Protocol" Version="0.21.3" />
-		<PackageReference Include="Tmds.DBus.SourceGenerator" Version="0.0.13">
+		<PackageReference Include="Tmds.DBus.SourceGenerator" Version="0.0.22">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 		</PackageReference>
@@ -45,7 +45,7 @@
 	</ItemGroup>
 	
 	<Target Name="PreBuild" BeforeTargets="PreBuildEvent">
-		<Copy SourceFiles="../README.md" DestinationFiles="README.md" UseHardlinksIfPossible="true"/>
+		<Copy SourceFiles="../README.md" DestinationFiles="README.md" UseHardlinksIfPossible="true" />
 	</Target>
 
 </Project>
