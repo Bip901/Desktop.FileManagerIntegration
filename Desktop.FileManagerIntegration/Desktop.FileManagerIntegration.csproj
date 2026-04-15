@@ -33,7 +33,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<PackageReference Include="Tmds.DBus.Protocol" Version="0.15.0" />
+		<PackageReference Include="Tmds.DBus.Protocol" Version="0.21.3" />
 		<PackageReference Include="Tmds.DBus.SourceGenerator" Version="0.0.13">
 		  <PrivateAssets>all</PrivateAssets>
 		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
